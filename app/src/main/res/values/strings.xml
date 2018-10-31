@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <string name="app_name">Solving of equations</string>
+    <string name="app_title">Solving of equations</string>
+    <!-- main -->
+    <string name="action_settings">Settings</string>
+    <string name="empty"/>
+    <string name="title_x">x</string>
+    <string name="title_2">2</string>
+    <string name="title_x_plus">x+</string>
+    <string name="title_plus">+</string>
+    <string name="title_equals0">=0</string>
+    <string name="message_no_solution">Since discriminate is negative, the equation has no solution.</string>
+    <string name="message_simplification">Convert</string>
+    <string name="message_simplification_1">, multiply the equation by\u0020</string>
+    <string name="message_simplification_2">, divide the equation by\u0020</string>
+    <string name="message_simplification_3">, we obtain equation:</string>
+    <string name="message_overflow">Introduced too large values.</string>
+    <string name="place_your_ad">A place for useful advertising</string>
+    <string name="hint_a">a</string>
+    <string name="hint_b">b</string>
+    <string name="hint_c">c</string>
+    <string name="share_title">Suggest to friends</string>
+    <string name="share_subject">Advice</string>
+    <string name="share_text">Hi, I use application Quadratic equation:</string>
+    <!-- help -->
+    <string name="title_activity_help">Help</string>
+    <string name="helpContentTitle">Content</string>
+    <string name="helpContent1Title">Description</string>
+    <string name="helpContent2Title">Entering negative values</string>
+    <string name="helpContent3Title">Enter fractional values</string>
+    <string name="helpNote">(* click on the name of the item in the content to go to the appropriate help section)</string>
+    <string name="help_text_1_1">The Standard Form of a Quadratic Equation looks like this:</string>
+    <string name="help_text_1_2">To solve the equation, enter the coefficients a, b and с in the appropriate fields and click \"Solve\", as shown in image 1.</string>
+    <string name="help_text_1_3">(Image 1)</string>
+    <string name="help_text_1_4">If you leave the input field empty, as the values of the application will use the 0 (see image 2). Therefore, the application solves square and linear equation of any kind.</string>
+    <string name="help_text_1_5">(image 2)</string>
+    <string name="help_text_2_1">To enter negative values, use the button \"minus\". Look for examples of different types of keyboards.\nFor the keyboard, as shown in image 3, you should press the button twice.</string>
+    <string name="help_text_2_2">(image 3)</string>
+    <string name="help_text_2_3">For the keyboard, as shown in image 4, simply press the minus button.</string>
+    <string name="help_text_2_4">(image 4)</string>
+    <string name="help_text_2_5">The result should look like this:</string>
+    <string name="help_text_2_6">(image 5)</string>
+    <string name="help_text_3_1">To enter a fractional value use the button "point". See the examples below (image 6) (image 7).</string>
+    <string name="help_text_3_2">(image 6)</string>
+    <string name="help_text_3_3">(image 7)</string>
+    <!-- ad -->
+    <string name="banner_ad_unit_id_1">ca-app-pub-4840130480184414/7995706883</string>
+    <string name="banner_ad_unit_id_2">ca-app-pub-4840130480184414/6949828888</string>
+    <!-- ask rate -->
+    <string name="title_activity_ask_rate">Rate Quadratic equation</string>
+    <string name="ask_rate_text">If you enjoy Quadratic equation, would you mind taking a moment to rate it?\u000AThanks for your support!</string>
+    <string name="button_rate_it_title">Rate it now</string>
+    <string name="button_remind_later_title">Remind me later</string>
+    <string name="button_dont_rate_title">No, thanks</string>
+    <!-- solution -->
+    <string name="solution_descriminant_title">Solving the quadratic equation by discriminant</string>
+    <string name="solution_vieta_title">Solving the quadratic equation by Vieta`s formulas</string>
+    <string name="solution_vieta_no_1_title">Since the roots are not whole numbers, the solving by the Vieta theorem inappropriate.</string>
+    <string name="solution_vieta_no_2_title">Since the equation is not reduced, the solving by the Vieta theorem inappropriate.</string>
+    <string name="solution_vieta_text_1">The multiple of the roots - a positive number. This means that the roots of the same sign.</string>
+    <string name="solution_vieta_text_2">\u0020Since the sum of the roots is also positive, both roots of the equation - the positive.</string>
+    <string name="solution_vieta_text_3">\u0020Since the sum of the roots is negative number, both roots of the equation - the negative.</string>
+    <string name="solution_vieta_text_4">The multiple of the roots - a negative number, it means that roots have different signs.</string>
+    <string name="solution_vieta_text_5">\u0020Since the sum of the roots is a positive number, the higher modulus root is a positive number.</string>
+    <string name="solution_vieta_text_6">\u0020Since the sum of the roots is a negative number, the higher modulus root is a negative number.</string>
+    <string name="solution_vieta_text_7">Consider the first equation:</string>
+    <string name="solution_vieta_text_8">Let us find a pairs that give the multiple\u0020</string>
+    <string name="solution_vieta_text_9">. This pair of numbers\u0020</string>
+    <string name="solution_vieta_text_10">Consider the second equation:</string>
+    <string name="solution_vieta_text_11">Of these pairs of the second equation is satisfied by the pair (</string>
+    <string name="solution_vieta_text_12">). It means:</string>
+    <string name="solution_graph_title">Graphical solution</string>
+    <string name="solution_graph_text_1">Roots of equation:\u0020</string>
+    <string name="solution_graph_text_2">Coordinates of apex:\u0020</string>
+    <!-- solution_incomplete -->
+    <string name="solution_incomplete_text_1">Answer: x - any number.</string>
+    <string name="solution_incomplete_text_2">Answer: the equation has no solution.</string>
+    <string name="solution_incomplete_text_3">x=0;</string>
+    <string name="solution_incomplete_text_4">x=0 or\u0020</string>
+    <string name="solution_incomplete_text_5">Solve the second equation:</string>
+    <string name="solution_incomplete_text_6">Answer:\u0020\u0020</string>
+    <!-- news -->
+    <string name="news_text_1_1">Important information!</string>
+    <string name="news_text_1_2">In new version of the application zero can be entered. Now the application solves linear and quadratic equations of any kind.</string>
+</resources>

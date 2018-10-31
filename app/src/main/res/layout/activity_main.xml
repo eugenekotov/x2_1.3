@@ -1,0 +1,205 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.kotov.x2.activities.MainActivity" >
+
+    <FrameLayout
+        android:id="@+id/layoutMain"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/layoutAppTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/title_backgound"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/ApplicationTitle"
+                    android:text="@string/app_title" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right" >
+
+                    <ImageButton
+                        android:id="@+id/buttonShare"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_share_selector"
+                        android:contentDescription="@string/empty"
+                        android:onClick="onClickButtonShare"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_share_variant" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutCondition"
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:background="@color/sub_title_backgound"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal" >
+                
+                <EditText
+                    android:id="@+id/editTextA"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/edit_text_height"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:inputType="numberSigned|numberDecimal"
+                    android:textSize="16sp"
+                    android:maxLength="7"
+                    android:hint="@string/hint_a"
+                    android:imeOptions="actionNext" />
+
+
+                <com.kotov.x2.widgets.FormulaView
+                    android:id="@+id/formulaX2"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="@dimen/formula_margin_top"
+                    android:layout_marginLeft="@dimen/formula_margin_left" />
+
+                <EditText
+                    android:id="@+id/editTextB"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/edit_text_height"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    android:inputType="numberSigned|numberDecimal"
+                    android:textSize="16sp"
+                    android:maxLength="7"
+                    android:hint="@string/hint_b"
+                    android:imeOptions="actionNext" />
+
+                <com.kotov.x2.widgets.FormulaView
+                    android:id="@+id/formulaX"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="@dimen/formula_margin_top"
+                    android:layout_marginLeft="@dimen/formula_margin_left" />
+
+                <EditText
+                    android:id="@+id/editTextC"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/edit_text_height"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    android:inputType="numberSigned|numberDecimal"
+                    android:textSize="16sp"
+                    android:maxLength="7"
+                    android:hint="@string/hint_c"
+                    android:imeOptions="actionDone" />
+
+                <com.kotov.x2.widgets.FormulaView
+                    android:id="@+id/formula0"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="@dimen/formula_margin_top"
+                    android:layout_marginLeft="@dimen/formula_margin_left" 
+                    android:layout_marginRight="10dp" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/answerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white" >
+
+                <ScrollView
+                    android:id="@+id/scrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbarAlwaysDrawVerticalTrack="true" >
+
+                    <ImageView
+                        android:id="@+id/drawingImageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/empty" />
+                </ScrollView>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/empty"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/shadow" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginTop="@dimen/button_margin_top"
+            android:gravity="right" >
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_selector"
+                android:contentDescription="@string/empty"
+                android:onClick="onClickButtonClear"
+                android:src="@drawable/clear" />
+
+            <ImageButton
+                android:id="@+id/buttonExecute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_selector"
+                android:contentDescription="@string/empty"
+                android:onClick="onClickButtonExecute"
+                android:src="@drawable/calc" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_selector"
+                android:contentDescription="@string/empty"
+                android:onClick="onClickButtonHelp"
+                android:src="@drawable/help" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/sub_title_backgound" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/place_your_ad"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+<!--         
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adViewMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/banner_ad_unit_id_1" >
+        </com.google.android.gms.ads.AdView>
+ -->   
+ </FrameLayout>
+
+</LinearLayout>

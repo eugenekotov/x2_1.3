@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <string name="app_name">Решение уравнений</string>
+    <string name="app_title">Решение уравнений</string>
+    <!-- main -->
+    <string name="action_settings">Settings</string>
+    <string name="empty"/>
+    <string name="title_x">x</string>
+    <string name="title_2">2</string>
+    <string name="title_x_plus">x+</string>
+    <string name="title_plus">+</string>
+    <string name="title_equals0">=0</string>
+    <string name="message_no_solution">Так как дискриминант меньше нуля, уравнение не имеет решений.</string>
+    <string name="message_simplification">Выполним преобразование</string>
+    <string name="message_simplification_1">, умножим уравнение на\u0020</string>
+    <string name="message_simplification_2">, разделим уравнение на\u0020</string>
+    <string name="message_simplification_3">, получим уравнение:</string>
+    <string name="message_overflow">Введены слишком большие значения.</string>
+    <string name="place_your_ad">Место для полезной рекламы</string>
+    <string name="share_title">Посоветовать друзьям</string>
+    <string name="share_subject">Совет</string>
+    <string name="share_text">Приложение для решения квадратных уравнений:</string>
+    <!-- help -->
+    <string name="title_activity_help">Помощь</string>
+    <string name="helpContentTitle">Содержание</string>
+    <string name="helpContent1Title">Общее описание</string>
+    <string name="helpContent2Title">Ввод отрицательных значений</string>
+    <string name="helpContent3Title">Ввод дробных значений</string>
+    <string name="helpNote">(* нажмите на название пункта в содержании для перехода в соответствующий раздел помощи)</string>
+    <string name="help_text_1_1">Приложение предназначено для решения квадратных уравнений вида:</string>
+    <string name="help_text_1_2">Для решения уравнения введите коэффициенты a, b и с в соответствующие поля и нажмите кнопку \"Решить\", как показано на рисунке 1.</string>
+    <string name="help_text_1_3">(рисунок 1)</string>
+    <string name="help_text_1_4">Если оставить поле ввода пустым, в качестве значения коэффициента приложение будет использовать ноль (см. рисунок 2). Таким образом приложение решает квадратные и линейные уравнения любого вида.</string>
+    <string name="help_text_1_5">(рисунок 2)</string>
+    <string name="help_text_2_1">Для ввода отрицательных значений используйте кнопку \"минус\". Посмотрите примеры для различных видов клавиатур.\nДля клавиатуры, как показано на рисунке 3, необходимо нажать кнопку дважды.</string>
+    <string name="help_text_2_2">(рисунок 3)</string>
+    <string name="help_text_2_3">Для клавиатуры, как показано на рисунке 4, просто нажмите кнопку минус.</string>
+    <string name="help_text_2_4">(рисунок 4)</string>
+    <string name="help_text_2_5">Результат должен выглядеть следующим образом:</string>
+    <string name="help_text_2_6">(рисунок 5)</string>
+    <string name="help_text_3_1">Для ввода дробных значений используйте точку. Смотрите примеры ниже (рис. 6) (рис. 7).</string>
+    <string name="help_text_3_2">(рисунок 6)</string>
+    <string name="help_text_3_3">(рисунок 7)</string>
+    <!-- ask rate -->
+    <string name="title_activity_ask_rate">Оцените приложение</string>
+    <string name="ask_rate_text">Если Вам нравится приложение, не могли бы Вы поставить оценку в маркете?\u000AСпасибо за поддержку!</string>
+    <string name="button_rate_it_title">Оценить сейчас</string>
+    <string name="button_remind_later_title">Напомнить позже</string>
+    <string name="button_dont_rate_title">Нет, спасибо</string>
+    <string name="solution_descriminant_title">Решение через дискриминант</string>
+    <string name="solution_vieta_title">Решение по теореме Виета</string>
+    <string name="solution_vieta_no_1_title">Так как корни уравнения не являются целыми числами, решение через теорему Виета нецелесообразно.</string>
+    <string name="solution_vieta_no_2_title">Так как уравнение имеет неприведённый вид, решение через теорему Виета нецелесообразно.</string>
+    <string name="solution_vieta_text_1">Произведение корней – положительное число. А значит, корни уравнения одного знака.</string>
+    <string name="solution_vieta_text_2">\u0020Так как сумма корней также является положительным числом, оба корня уравнения – положительные.</string>
+    <string name="solution_vieta_text_3">\u0020Так как сумма корней отрицательное число, оба корня уравнения – отрицательные.</string>
+    <string name="solution_vieta_text_4">Произведение корней – отрицательное число, значит, корни уравнения имеют разные знаки.</string>
+    <string name="solution_vieta_text_5">\u0020Так как сумма корней является положительным числом, то больший по модулю корень является положительным числом.</string>
+    <string name="solution_vieta_text_6">\u0020Так как сумма корней отрицательное число, то больший по модулю корень является отрицательным числом.</string>
+    <string name="solution_vieta_text_7">Рассмотрим первое уравнение:</string>
+    <string name="solution_vieta_text_8">Найдём пары множителей, дающих произведение\u0020</string>
+    <string name="solution_vieta_text_9">. Это пары чисел\u0020</string>
+    <string name="solution_vieta_text_10">Рассмотрим второе уравнение:</string>
+    <string name="solution_vieta_text_11">Из перечисленных пар второму уравнению удовлетворяет пара (</string>
+    <string name="solution_vieta_text_12">). Значит:</string>
+    <string name="solution_graph_title">Графическое решение</string>
+    <string name="solution_graph_text_1">Корни уравнения:\u0020</string>
+    <string name="solution_graph_text_2">Координаты вершины:\u0020</string>
+    <!-- solution_incomplete -->
+    <string name="solution_incomplete_text_1">Ответ: x - любое число.</string>
+    <string name="solution_incomplete_text_2">Ответ: уравнение не имеет решений.</string>
+    <string name="solution_incomplete_text_3">x=0;</string>
+    <string name="solution_incomplete_text_4">x=0 или\u0020</string>
+    <string name="solution_incomplete_text_5">Решим второе уравнение:</string>
+    <string name="solution_incomplete_text_6">Ответ:\u0020\u0020</string>
+    <!-- news -->
+    <string name="news_text_1_1">Важная информация!</string>
+    <string name="news_text_1_2">В новой версии приложения в качестве коэфициента можно вводить ноль. Теперь приложение решает линейные и квадратные уравнения любого вида.</string>
+</resources>

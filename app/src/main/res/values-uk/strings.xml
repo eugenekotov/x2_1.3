@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <string name="app_name">Розв`язання рівнянь</string>
+    <string name="app_title">Розв`язання рівнянь</string>
+    <!-- main -->
+    <string name="action_settings">Settings</string>
+    <string name="empty"/>
+    <string name="title_x">x</string>
+    <string name="title_2">2</string>
+    <string name="title_x_plus">x+</string>
+    <string name="title_plus">+</string>
+    <string name="title_equals0">=0</string>
+    <string name="message_no_solution">Оскільки дискримінант менше нуля, рівняння не має розв`язків.</string>
+    <string name="message_simplification">Виконаємо перетворення</string>
+    <string name="message_simplification_1">, помножимо рівняння на\u0020</string>
+    <string name="message_simplification_2">, поділимо рівняння на\u0020</string>
+    <string name="message_simplification_3">, одержимо рівняння:</string>
+    <string name="message_overflow">Введені занадто великі значення.</string>
+    <string name="place_your_ad">Місце корисної реклами</string>
+    <string name="share_title">Порадити друзям</string>
+    <string name="share_subject">Порада</string>
+    <string name="share_text">Додаток для розв`язання квадратних рівнянь:</string>
+    <!-- help -->
+    <string name="title_activity_help">Допомога</string>
+    <string name="helpContentTitle">Зміст</string>
+    <string name="helpContent1Title">Загальний опис</string>
+    <string name="helpContent2Title">Введення від`ємних значень</string>
+    <string name="helpContent3Title">Введення дрібних значень</string>
+    <string name="helpNote">(* натисніть на назву пункту в змісті для переходу у відповідний розділ допомоги)</string>
+    <string name="help_text_1_1">Додаток призначений для розв`язання квадратних рівнянь виду:</string>
+    <string name="help_text_1_2">Для розв`язання рівняння введіть коефіцієнти a, b и с у відповідні поля і натисніть кнопку \"Розв`язати\", як показано на малюнку 1.</string>
+    <string name="help_text_1_3">(малюнок 1)</string>
+    <string name="help_text_1_4">Якщо залишити поле введення порожнім, в якості значення коефіцієнта додаток буде використовувати нуль (див. малюнок 2). Таким чином додаток розв`язує квадратні та лінійні рівняння будь-якого виду.</string>
+    <string name="help_text_1_5">(малюнок 2)</string>
+    <string name="help_text_2_1">Для введення від`ємних значень використовуйте кнопку \"мінус\". Подивіться приклади для різних видів клавіатур.\nДля клавіатури, яку показано на малюнку 3, необхідно натиснути кнопку двічі.</string>
+    <string name="help_text_2_2">(малюнок 3)</string>
+    <string name="help_text_2_3">Для клавіатури, яку показано на малюнку 4, просто натисніть кнопку мінус.</string>
+    <string name="help_text_2_4">(малюнок 4)</string>
+    <string name="help_text_2_5">Результат повинен виглядати наступним чином:</string>
+    <string name="help_text_2_6">(малюнок 5)</string>
+    <string name="help_text_3_1">Для введення дробових значень використовуйте крапку. Дивіться приклади нижче (малюнок 6) (малюнок 7).</string>
+    <string name="help_text_3_2">(малюнок 6)</string>
+    <string name="help_text_3_3">(малюнок 7)</string>
+    <!-- ask rate -->
+    <string name="title_activity_ask_rate">Оцініть додаток</string>
+    <string name="ask_rate_text">Якщо Вам подобається додаток, не могли б Ви поставити оцінку в маркеті?\u000AДякую за підтримку!</string>
+    <string name="button_rate_it_title">Оцінити зараз</string>
+    <string name="button_remind_later_title">Нагадати пізніше</string>
+    <string name="button_dont_rate_title">Ні, дякую</string>
+    <!-- solution -->
+    <string name="solution_descriminant_title">Рішення через дискримінант</string>
+    <string name="solution_vieta_title">Рішення по теоремі Вієта</string>
+    <string name="solution_vieta_no_1_title">Оскільки корені рівняння не є цілими числами, рішення через теорему Вієта недоцільно.</string>
+    <string name="solution_vieta_no_2_title">Оскільки рівняння має наведений вид, рішення через теорему Вієта недоцільно.</string>
+    <string name="solution_vieta_text_1">Добуток коренів - позитивне число. А значить, корені рівняння мають однаковий знак.</string>
+    <string name="solution_vieta_text_2">\u0020Оскільки сума коренів також є позитивним числом, обидва кореня рівняння - додатні.</string>
+    <string name="solution_vieta_text_3">\u0020Оскільки сума коренів негативне число, обидва кореня рівняння - від`ємні.</string>
+    <string name="solution_vieta_text_4">Добуток коренів - негативне число, значить, корені рівняння мають різний знак.</string>
+    <string name="solution_vieta_text_5">\u0020Оскільки сума коренів є додатнім числом, то більший за модулем корінь додатній.</string>
+    <string name="solution_vieta_text_6">\u0020Оскільки сума коренів негативне число, то більший за модулем корінь від`ємний.</string>
+    <string name="solution_vieta_text_7">Розглянемо перше рівняння:</string>
+    <string name="solution_vieta_text_8">Знайдемо пари множників, що дають добуток\u0020</string>
+    <string name="solution_vieta_text_9">. Це пари чисел\u0020</string>
+    <string name="solution_vieta_text_10">Розглянемо друге рівняння:</string>
+    <string name="solution_vieta_text_11">З перерахованих пар другому рівнянню задовольняє пара (</string>
+    <string name="solution_vieta_text_12">). Значить:</string>
+    <string name="solution_graph_title">Графічний розв`язок</string>
+    <string name="solution_graph_text_1">Корені рівняння:\u0020</string>
+    <string name="solution_graph_text_2">Координати вершини:\u0020</string>
+    <!-- solution_incomplete -->
+    <string name="solution_incomplete_text_1">Відповідь: x - будь-яке число.</string>
+    <string name="solution_incomplete_text_2">Відповідь: рівняння не має рішень.</string>
+    <string name="solution_incomplete_text_3">x=0;</string>
+    <string name="solution_incomplete_text_4">x=0 або\u0020</string>
+    <string name="solution_incomplete_text_5">Розв`яжемо друге рівняння:</string>
+    <string name="solution_incomplete_text_6">Відповідь:\u0020\u0020</string>
+    <!-- news -->
+    <string name="news_text_1_1">Важлива інформація!</string>
+    <string name="news_text_1_2">У новій версії додатку у якості коефіцієнта можна вводити нуль. Тепер додаток вирішує лінійні і квадратні рівняння будь-якого виду.</string>
+</resources>
