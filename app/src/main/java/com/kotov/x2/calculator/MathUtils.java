@@ -32,7 +32,7 @@ public final class MathUtils {
 		if (arg >= 0) {
 			return Long.toString(arg);
 		} else {
-			StringBuffer result = new StringBuffer();
+			StringBuilder result = new StringBuilder();
 			result.append("(");
 			result.append(arg);
 			result.append(")");

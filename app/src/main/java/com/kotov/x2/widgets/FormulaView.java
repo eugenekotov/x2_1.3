@@ -13,7 +13,7 @@ public class FormulaView extends View {
 	public enum FormulaViewAlignment {
 		TOP,
 		CENTER,
-		BOTTOM;
+		BOTTOM
 	}
 
 	private ISolutionItem formula;

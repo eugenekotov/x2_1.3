@@ -22,7 +22,7 @@ import com.kotov.x2.solution.Solution;
 
 public class Calculator {
 
-	public enum X {
+	private enum X {
 		X1(1, "+", 1), X2(2, "-", -1);
 
 		private int index;
@@ -60,14 +60,14 @@ public class Calculator {
 	private long d;
 	private double x1Double;
 	private double x2Double;
-	private long x1Long;
-	private long x2Long;
+//	private long x1Long;
+//	private long x2Long;
 
 	private long dIntPart = 0; // an entire part of the root of the discriminant
 	private long dSqrtPart = 0; // under the root of the discriminant
 
-	private ListFormula equation1;
-	private ListFormula equation2;
+//	private ListFormula equation1;
+//	private ListFormula equation2;
 	private Solution solution;
 
 	public Calculator(Context context, double a, double b, double c) {
@@ -452,7 +452,7 @@ public class Calculator {
 	}
 
 	private enum XsInvetigation {
-		BOTH_POSITIVE, BOTH_NEGATIVE, LAGER_POSITIVE, LAGER_NEGATIVE;
+		BOTH_POSITIVE, BOTH_NEGATIVE, LAGER_POSITIVE, LAGER_NEGATIVE
 	}
 
 	/*
@@ -502,7 +502,7 @@ public class Calculator {
 	}
 
 	private ISolutionItem getABCFormula() {
-		StringBuffer text = new StringBuffer();
+		StringBuilder text = new StringBuilder();
 		text.append("a=");
 		text.append(aLong);
 		text.append(", b=");
@@ -871,8 +871,8 @@ public class Calculator {
 			return;
 		}
 
-		x1Long = (long) x1Double;
-		x2Long = (long) x2Double;
+		long x1Long = (long) x1Double;
+		long x2Long = (long) x2Double;
 
 		if (aLong != 1) {
 			solution.add(new TextPart(context.getString(R.string.solution_vieta_no_2_title)));
@@ -886,7 +886,7 @@ public class Calculator {
 
 		solution.add(MathUtils.getEquation(1, pDouble, qDouble));
 
-		equation1 = new ListFormula();
+		ListFormula equation1 = new ListFormula();
 		equation1.add(new IndexFormula(new LetterFormula("x"), new LetterFormula("1")));
 		equation1.add(new LetterFormula(".", Alignment.CENTER));
 		equation1.add(new IndexFormula(new LetterFormula("x"), new LetterFormula("2")));
@@ -894,7 +894,7 @@ public class Calculator {
 		equation1.add(new LetterFormula(MathUtils.getArgDouble(qDouble, false, false)));
 		equation1.add(new LetterFormula(";"));
 
-		equation2 = new ListFormula();
+		ListFormula equation2 = new ListFormula();
 		equation2.add(new IndexFormula(new LetterFormula("x"), new LetterFormula("1")));
 		equation2.add(new LetterFormula("+"));
 		equation2.add(new IndexFormula(new LetterFormula("x"), new LetterFormula("2")));

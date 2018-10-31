@@ -18,7 +18,7 @@ public class LetterFormula implements ISolutionItem, ISolutionLine {
 
 	public enum Alignment {
 		CENTER,
-		BOTTOM;
+		BOTTOM
 	}
 	
 	public LetterFormula(String text) {

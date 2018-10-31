@@ -67,9 +67,9 @@ public class MainActivity extends Activity {
     private ViewGroup layoutMain;
     private LinearLayout layoutWindowTitle;
     private LinearLayout layoutCondition;
-    private FormulaView formulaX2;
-    private FormulaView formulaX;
-    private FormulaView formula0;
+//    private FormulaView formulaX2;
+//    private FormulaView formulaX;
+//    private FormulaView formula0;
     private int cellColor;
     private Solution solution;
     private boolean isSolutionShowing = false;
@@ -284,7 +284,7 @@ public class MainActivity extends Activity {
         layoutWindowTitle = (LinearLayout) findViewById(R.id.layoutAppTitle);
         layoutCondition = (LinearLayout) findViewById(R.id.layoutCondition);
         // x2
-        formulaX2 = (FormulaView) findViewById(R.id.formulaX2);
+        FormulaView formulaX2 = (FormulaView) findViewById(R.id.formulaX2);
         ListFormula listConstruction = new ListFormula();
         listConstruction.add(new PowerFormula(new LetterFormula("x"), new LetterFormula("2")));
         listConstruction.add(new LetterFormula("+"));
@@ -293,13 +293,13 @@ public class MainActivity extends Activity {
         Rect bounds = formulaX2.getFormula().getBounds(textSize);
         formulaX2.setMinimumHeight(bounds.height());
         // x
-        formulaX = (FormulaView) findViewById(R.id.formulaX);
+        FormulaView formulaX = (FormulaView) findViewById(R.id.formulaX);
         formulaX.setFormulaViewAlignment(FormulaViewAlignment.BOTTOM);
         formulaX.setFormula(new LetterFormula("x+"));
         formulaX.setTextSize(textSize);
         formulaX.setMinimumHeight(bounds.height());
         // 0
-        formula0 = (FormulaView) findViewById(R.id.formula0);
+        FormulaView formula0 = (FormulaView) findViewById(R.id.formula0);
         formula0.setFormulaViewAlignment(FormulaViewAlignment.BOTTOM);
         formula0.setFormula(new LetterFormula("=0"));
         formula0.setTextSize(textSize);
@@ -455,7 +455,7 @@ public class MainActivity extends Activity {
             editor.putInt(KEY_SHOW_NEWS_COUNT, showNewsCount);
         }
         //
-        editor.commit();
+        editor.apply();
     }
 
     private void remindToView(final View view) {

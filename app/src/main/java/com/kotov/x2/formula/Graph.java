@@ -12,15 +12,15 @@ import com.kotov.x2.solution.ISolutionLine;
 public class Graph implements ISolutionLine {
 
 	private enum PointAxis {
-		X, Y;
+		X, Y
 	}
 
 	private enum XAlign {
-		LEFT, CENTER, RIGHT;
+		LEFT, CENTER, RIGHT
 	}
 
 	private enum YAlign {
-		TOP, CENTER, BOTTOM;
+		TOP, CENTER, BOTTOM
 	}
 
 	private class PointTitleAlign {
@@ -236,7 +236,7 @@ public class Graph implements ISolutionLine {
 		}
 
 		YAlign yAlign = YAlign.TOP;
-		;
+
 		if (aDouble > 0) {
 			yAlign = YAlign.BOTTOM;
 		}
