@@ -8,6 +8,7 @@ import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Rect;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -114,8 +115,7 @@ public class MainActivity extends Activity {
     }
 
     private void initDrawer() {
-//		DrawUtils.setTypeface(Typeface.createFromAsset(getAssets(), "font/timesnewroman.ttf"));
-        // TODO fix font for drawer
+		DrawUtils.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/timesnewroman.ttf"));
         DrawUtils.initScreeSize(this);
     }
 
