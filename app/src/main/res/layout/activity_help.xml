@@ -1,0 +1,280 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.kotov.x2.activities.HelpActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/title_backgound"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" >
+
+        <TextView
+            style="@style/ApplicationTitle"
+            android:text="@string/app_title" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutCondition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/sub_title_backgound"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_activity_help"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/answerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <ScrollView
+            android:id="@+id/scrollViewHelp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbarAlwaysDrawVerticalTrack="true" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    style="@style/HelpTitle"
+                    android:text="@string/helpContentTitle" />
+
+                <TextView
+                    style="@style/HelpContent"
+                    android:clickable="true"
+                    android:onClick="onClickHelpContent1"
+                    android:text="@string/helpContent1Title" />
+
+                <TextView
+                    style="@style/HelpContent"
+                    android:clickable="true"
+                    android:onClick="onClickHelpContent2"
+                    android:text="@string/helpContent2Title" />
+
+                <TextView
+                    style="@style/HelpContent"
+                    android:clickable="true"
+                    android:onClick="onClickHelpContent3"
+                    android:text="@string/helpContent3Title" />
+
+                <TextView
+                    style="@style/HelpNote"
+                    android:text="@string/helpNote" />
+
+                <TextView
+                    android:id="@+id/textViewHelp1"
+                    style="@style/HelpTitle"
+                    android:text="@string/helpContent1Title" />
+
+                <TextView
+                    style="@style/HelpText"
+                    android:text="@string/help_text_1_1" />
+
+                <com.kotov.x2.widgets.FormulaView
+                    android:id="@+id/formulaEquation"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    style="@style/HelpText"
+                    android:text="@string/help_text_1_2" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="@dimen/help_image_max_width"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitStart"
+                    android:contentDescription="@string/empty"
+                    android:src="@drawable/help_img_1" />
+
+                <TextView
+                    style="@style/HelpNote"
+                    android:layout_gravity="center"
+                    android:text="@string/help_text_1_3" />
+
+                <TextView
+                    style="@style/HelpText"
+                    android:text="@string/help_text_1_4" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="@dimen/help_image_max_width"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitStart"
+                    android:contentDescription="@string/empty"
+                    android:src="@drawable/help_img_2" />
+
+                <TextView
+                    style="@style/HelpNote"
+                    android:layout_gravity="center"
+                    android:text="@string/help_text_1_5" />
+
+                <TextView
+                    android:id="@+id/textViewHelp2"
+                    style="@style/HelpTitle"
+                    android:text="@string/helpContent2Title" />
+
+                <TextView
+                    style="@style/HelpText"
+                    android:text="@string/help_text_2_1" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="@dimen/help_image_max_width"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitStart"
+                    android:contentDescription="@string/empty"
+                    android:src="@drawable/help_img_3" />
+
+                <TextView
+                    style="@style/HelpNote"
+                    android:layout_gravity="center"
+                    android:text="@string/help_text_2_2" />
+
+                <TextView
+                    style="@style/HelpText"
+                    android:text="@string/help_text_2_3" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="@dimen/help_image_max_width"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitStart"
+                    android:contentDescription="@string/empty"
+                    android:src="@drawable/help_img_4" />
+
+                <TextView
+                    style="@style/HelpNote"
+                    android:layout_gravity="center"
+                    android:text="@string/help_text_2_4" />
+
+                <TextView
+                    style="@style/HelpText"
+                    android:text="@string/help_text_2_5" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="@dimen/help_image_max_width"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitStart"
+                    android:contentDescription="@string/empty"
+                    android:src="@drawable/help_img_5" />
+
+                <TextView
+                    android:id="@+id/textViewHelp3"
+                    style="@style/HelpTitle"
+                    android:text="@string/helpContent3Title" />
+
+                <TextView
+                    style="@style/HelpText"
+                    android:text="@string/help_text_3_1" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="@dimen/help_image_max_width"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitStart"
+                    android:contentDescription="@string/empty"
+                    android:src="@drawable/help_img_6" />
+
+                <TextView
+                    style="@style/HelpNote"
+                    android:layout_gravity="center"
+                    android:text="@string/help_text_3_2" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="@dimen/help_image_max_width"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitStart"
+                    android:contentDescription="@string/empty"
+                    android:src="@drawable/help_img_7" />
+
+                <TextView
+                    style="@style/HelpNote"
+                    android:layout_gravity="center"
+                    android:text="@string/help_text_3_3" />
+            </LinearLayout>
+        </ScrollView>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/empty"
+            android:scaleType="fitXY"
+            android:src="@drawable/shadow" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/sub_title_backgound" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/place_your_ad"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <!-- 
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adViewHelp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/banner_ad_unit_id_2" >
+        </com.google.android.gms.ads.AdView>
+         -->
+    </FrameLayout>
+
+</LinearLayout>
