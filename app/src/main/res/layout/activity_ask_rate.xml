@@ -1,0 +1,57 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.kotov.x2.activities.AskRateActivity" >
+
+    <LinearLayout
+        android:id="@+id/layoutAppTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/title_backgound"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/ApplicationTitle"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:text="@string/title_activity_ask_rate" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/empty"
+        android:scaleType="fitXY"
+        android:src="@drawable/shadow" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="@string/ask_rate_text"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/buttonRateIt"
+        style="@style/RateButton"
+        android:text="@string/button_rate_it_title" />
+
+    <Button
+        android:id="@+id/buttonRemindLater"
+        style="@style/RateButton"
+        android:text="@string/button_remind_later_title" />
+
+    <Button
+        android:id="@+id/buttonDontRate"
+        style="@style/RateButton"
+        android:text="@string/button_dont_rate_title" />
+
+</LinearLayout>
