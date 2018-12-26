@@ -46,9 +46,9 @@
     <string name="ask_rate_text">Якщо Вам подобається додаток, не могли б Ви поставити оцінку в маркеті?\u000AДякую за підтримку!</string>
     <string name="button_rate_it_title">Оцінити зараз</string>
     <string name="button_remind_later_title">Нагадати пізніше</string>
-    <string name="button_dont_rate_title">Ні, дякую</string>
+    <string name="button_do_not_rate_title">Ні, дякую</string>
     <!-- solution -->
-    <string name="solution_descriminant_title">Рішення через дискримінант</string>
+    <string name="solution_discriminant_title">Рішення через дискримінант</string>
     <string name="solution_vieta_title">Рішення по теоремі Вієта</string>
     <string name="solution_vieta_no_1_title">Оскільки корені рівняння не є цілими числами, рішення через теорему Вієта недоцільно.</string>
     <string name="solution_vieta_no_2_title">Оскільки рівняння має наведений вид, рішення через теорему Вієта недоцільно.</string>

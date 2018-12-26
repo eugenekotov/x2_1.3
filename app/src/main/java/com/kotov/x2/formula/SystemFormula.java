@@ -24,7 +24,7 @@ public class SystemFormula implements ISolutionItem, ISolutionLine {
 		int cellSize = DrawUtils.getCellSize(textSize);
 		arg1.draw(canvas, textSize, leftX + getMarginLeft(textSize), bottomY - cellSize);
 		arg2.draw(canvas, textSize, leftX + getMarginLeft(textSize), bottomY + arg1.getHeightInCells(textSize) + DrawUtils.getCellSize(textSize) * 2 - cellSize);
-		DrawUtils.drawBrace(canvas, textSize, DrawUtils.getStrokeWidth(textSize), leftX, bottomY + DrawUtils.getCellSize(textSize) * 2 + 1 - cellSize, DrawUtils.getCellSize(textSize) * 3 + 2, getIdentHorizontal(textSize));
+		DrawUtils.drawBrace(canvas, textSize, DrawUtils.getStrokeWidth(textSize), leftX, bottomY + DrawUtils.getCellSize(textSize) * 2 + 1 - cellSize, DrawUtils.getCellSize(textSize) * 3 + 2, getIndentHorizontal(textSize));
 	}
 
 	@Override
@@ -35,12 +35,12 @@ public class SystemFormula implements ISolutionItem, ISolutionLine {
 		return new Rect(0, arg1Bounds.top - arg1Bounds.bottom - cellSize / 2, Math.max(arg1Bounds.width(), arg2Bounds.width()) + getMarginLeft(textSize), arg2Bounds.bottom - arg2Bounds.top - cellSize + cellSize / 2);
 	}
 	
-	private int getIdentHorizontal(int textSize) {
+	private int getIndentHorizontal(int textSize) {
 		return textSize / 10 * 3;
 	}
 	
 	private int getMarginLeft(int textSize) {
-		return getIdentHorizontal(textSize) * 4 ;
+		return getIndentHorizontal(textSize) * 4 ;
 	}
 
 	@Override

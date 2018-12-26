@@ -19,9 +19,9 @@ public class AskRateActivity extends Activity implements OnClickListener {
 	}
 
 	private void init() {
-		((Button) findViewById(R.id.buttonRateIt)).setOnClickListener(this);
-		((Button) findViewById(R.id.buttonRemindLater)).setOnClickListener(this);
-		((Button) findViewById(R.id.buttonDontRate)).setOnClickListener(this);
+		(findViewById(R.id.buttonRateIt)).setOnClickListener(this);
+		(findViewById(R.id.buttonRemindLater)).setOnClickListener(this);
+		(findViewById(R.id.buttonDoNotRate)).setOnClickListener(this);
 	}
 
 	@Override

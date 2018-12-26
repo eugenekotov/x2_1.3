@@ -10,7 +10,7 @@
         android:id="@+id/layoutAppTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/title_backgound"
+        android:background="@color/title_background"
         android:gravity="center"
         android:orientation="horizontal" >
 
@@ -50,8 +50,8 @@
         android:text="@string/button_remind_later_title" />
 
     <Button
-        android:id="@+id/buttonDontRate"
+        android:id="@+id/buttonDoNotRate"
         style="@style/RateButton"
-        android:text="@string/button_dont_rate_title" />
+        android:text="@string/button_do_not_rate_title" />
 
 </LinearLayout>

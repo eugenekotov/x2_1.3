@@ -72,7 +72,7 @@ public final class DrawUtils {
         point = drawLineBySize(canvas, paint, strokeWidth, point, indentHorizontal, sizeY / 2);
         point = drawLineBySize(canvas, paint, strokeWidth, point, indentHorizontal, -sizeY);
         point = drawLineBySize(canvas, paint, strokeWidth, point, sizeX, 0);
-        point = drawLineBySize(canvas, paint, strokeWidth, point, 0, indentVertical);
+        drawLineBySize(canvas, paint, strokeWidth, point, 0, indentVertical);
         return new Point(leftX + sizeX + indentHorizontal * 3, bottomY);
     }
 
@@ -95,7 +95,7 @@ public final class DrawUtils {
         point = drawLineBySize(canvas, paint, strokeWidth, point, 0, -sizeY / 2 + indent * 2);
 
         point = drawLineBySize(canvas, paint, strokeWidth, point, indent - indent * 2 / 3, -indent + indent / 3);
-        point = drawLineBySize(canvas, paint, strokeWidth, point, indent / 3, 0);
+        drawLineBySize(canvas, paint, strokeWidth, point, indent / 3, 0);
 
         return new Point(leftX + indent * 3, bottomY);
     }

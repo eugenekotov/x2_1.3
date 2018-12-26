@@ -4,13 +4,8 @@
     <dimen name="edit_text_height">40dp</dimen>
     <dimen name="formula_margin_top">18dp</dimen>
     <dimen name="formula_margin_left">2dp</dimen>
-    <dimen name="formula_land_margin_top_bebebe">20dp</dimen>
-    <dimen name="condition_area_height">60dp</dimen>
     <dimen name="button_margin_top">90dp</dimen>
-    <dimen name="button_height">36dp</dimen>
     <dimen name="text_size">18sp</dimen>
-    <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="help_image_max_width">540px</dimen>
 
 </resources>

@@ -20,15 +20,15 @@ public class SqrtFormula implements ISolutionItem, ISolutionLine {
 	public void draw(Canvas canvas, int textSize, int leftX, int bottomY) {
 		Rect argBounds = arg.getBounds(textSize);
 		arg.draw(canvas, textSize, leftX + getMarginLeft(textSize), bottomY);
-		DrawUtils.drawSqrt(canvas, textSize, DrawUtils.getStrokeWidth(textSize), leftX, bottomY + argBounds.bottom, argBounds.width() + getMarginRight(textSize), argBounds.height() + getMarginTop(textSize), getIdentHorizontal(textSize), getMarginTop(textSize));
+		DrawUtils.drawSqrt(canvas, textSize, DrawUtils.getStrokeWidth(textSize), leftX, bottomY + argBounds.bottom, argBounds.width() + getMarginRight(textSize), argBounds.height() + getMarginTop(textSize), getIndentHorizontal(textSize), getMarginTop(textSize));
 	}
 
-	private int getIdentHorizontal(int textSize) {
+	private int getIndentHorizontal(int textSize) {
 		return textSize / 10 + 1;
 	}
 	
 	private int getMarginLeft(int textSize) {
-		return getIdentHorizontal(textSize) * 3 + 1;
+		return getIndentHorizontal(textSize) * 3 + 1;
 	}
 
 	private int getMarginRight(int textSize) {

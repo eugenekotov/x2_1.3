@@ -1,8 +1,5 @@
 package com.kotov.x2.calculator;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.content.Context;
 
 import com.kotov.x2.R;
@@ -20,9 +17,12 @@ import com.kotov.x2.formula.TransferPart;
 import com.kotov.x2.solution.ISolutionItem;
 import com.kotov.x2.solution.Solution;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Calculator {
 
-	private enum X {
+	enum X {
 		X1(1, "+", 1), X2(2, "-", -1);
 
 		private int index;
@@ -262,7 +262,7 @@ public class Calculator {
 			result.add(new FractionalFormula(new LetterFormula(MathUtils.getArgDouble(Math.abs(b), false, false)),
 					new LetterFormula(MathUtils.getArgDouble(Math.abs(a), false, false))));
 			Fraction fraction = new Fraction(Math.abs(-b), Math.abs(a));
-			if (fraction.isRedused()) {
+			if (fraction.isReduced()) {
 				result.add(new LetterFormula("="));
 				if (equationResult < 0) {
 					result.add(new LetterFormula("-"));
@@ -380,7 +380,7 @@ public class Calculator {
 		// result
 		dCalculationFormulasList.add(new LetterFormula(Long.toString(d) + ";"));
 		//
-		solution.add(new TextPart(context.getString(R.string.solution_descriminant_title), true));
+		solution.add(new TextPart(context.getString(R.string.solution_discriminant_title), true));
 		solution.add(getABCFormula());
 		solution.add(MathUtils.getDFormula());
 		solution.add(new TransferPart(dCalculationFormulasList));
@@ -451,18 +451,18 @@ public class Calculator {
 		}
 	}
 
-	private enum XsInvetigation {
+	private enum XsInvestigation {
 		BOTH_POSITIVE, BOTH_NEGATIVE, LAGER_POSITIVE, LAGER_NEGATIVE
 	}
 
 	/*
 	 * Returns pair of numbers that are in the multiplication give our number
 	 */
-	private List<Pair> getPairs(long value, XsInvetigation xsInvetigation) {
+	private List<Pair> getPairs(long value, XsInvestigation xsInvestigation) {
 		List<Pair> result = new ArrayList<Pair>();
 		for (long i = 1; i <= Math.sqrt(value); i++) {
 			if (value % i == 0) {
-				Pair pair = setPairSign(new Pair(value / i, i), xsInvetigation);
+				Pair pair = setPairSign(new Pair(value / i, i), xsInvestigation);
 				if (!result.contains(pair)) {
 					result.add(pair);
 				}
@@ -471,19 +471,19 @@ public class Calculator {
 		return result;
 	}
 
-	private Pair setPairSign(Pair pair, XsInvetigation xsInvetigation) {
+	private Pair setPairSign(Pair pair, XsInvestigation xsInvestigation) {
 		pair.n1 = Math.abs(pair.n1);
 		pair.n2 = Math.abs(pair.n2);
-		if (xsInvetigation == XsInvetigation.BOTH_NEGATIVE) {
+		if (xsInvestigation == XsInvestigation.BOTH_NEGATIVE) {
 			pair.n1 = -pair.n1;
 			pair.n2 = -pair.n2;
-		} else if (xsInvetigation == XsInvetigation.LAGER_NEGATIVE) {
+		} else if (xsInvestigation == XsInvestigation.LAGER_NEGATIVE) {
 			if (pair.n1 > pair.n2) {
 				pair.n1 = -pair.n1;
 			} else {
 				pair.n2 = -pair.n2;
 			}
-		} else if (xsInvetigation == XsInvetigation.LAGER_POSITIVE) {
+		} else if (xsInvestigation == XsInvestigation.LAGER_POSITIVE) {
 			if (pair.n1 > pair.n2) {
 				pair.n2 = -pair.n2;
 			} else {
@@ -580,7 +580,7 @@ public class Calculator {
 		Fraction fraction = new Fraction(Math.abs(numerator), Math.abs(denominator));
 
 		int sign = Long.signum(numerator) * Long.signum(denominator);
-		if (sign < 0 || fraction.isRedused()) {
+		if (sign < 0 || fraction.isReduced()) {
 			ListFormula step = new ListFormula();
 			if (sign < 0) {
 				step.add(new LetterFormula("-"));
@@ -646,7 +646,7 @@ public class Calculator {
 		result.add(step);
 
 		// second stage, reducing fractions
-		if (fraction1.isRedused() | fraction2.isRedused()) {
+		if (fraction1.isReduced() | fraction2.isReduced()) {
 			step = new ListFormula();
 			// first fraction
 			if (Long.signum(-bLong) * Long.signum(2 * aLong) < 0) {
@@ -688,19 +688,19 @@ public class Calculator {
 		private long intPart = 0;
 		private long numerator;
 		private long denominator;
-		private boolean redused = false;
+		private boolean reduced;
 
 		public Fraction(long numerator, long denominator) {
 			this.numerator = numerator;
 			this.denominator = denominator;
-			redused = false;
+			reduced = false;
 			long greatestCommonDivisor = MathUtils.greatestCommonDivisor(this.numerator, this.denominator);
 			if (greatestCommonDivisor != 1) {
-				redused = true;
+				reduced = true;
 				this.numerator = this.numerator / greatestCommonDivisor;
 				this.denominator = this.denominator / greatestCommonDivisor;
 			}
-			redused = redused | calcIntPart();
+			reduced = reduced | calcIntPart();
 		}
 
 		private boolean calcIntPart() {
@@ -736,8 +736,8 @@ public class Calculator {
 			return this.intPart + (double) this.numerator / (double) this.denominator;
 		}
 
-		public boolean isRedused() {
-			return redused;
+		public boolean isReduced() {
+			return reduced;
 		}
 
 		public long getIntPart() {
@@ -759,7 +759,7 @@ public class Calculator {
 		private long arg;
 		private long intPart = 1;
 		private long sqrtPart = 1;
-		private boolean redused = false;
+		private boolean reduced;
 
 		public Sqrt(long arg) {
 			this.arg = arg;
@@ -767,10 +767,10 @@ public class Calculator {
 			if (sqrt == (long) sqrt) {
 				intPart = (long) sqrt;
 				sqrtPart = 1;
-				redused = true;
+				reduced = true;
 			} else {
 				calc();
-				redused = (sqrtPart != arg);
+				reduced = (sqrtPart != arg);
 			}
 		}
 
@@ -790,7 +790,7 @@ public class Calculator {
 			List<Long> factors = getFactors(arg);
 			int i = 0;
 			while (i < factors.size() - 1) {
-				if (factors.get(i) == factors.get(i + 1)) {
+				if (factors.get(i).equals(factors.get(i + 1))) {
 					intPart = intPart * factors.get(i);
 					i = i + 2;
 				} else {
@@ -804,7 +804,7 @@ public class Calculator {
 		}
 
 		public boolean isReduced() {
-			return redused;
+			return reduced;
 		}
 
 		public double getIntPart() {
@@ -821,16 +821,16 @@ public class Calculator {
 		private long numeratorInt;
 		private long numeratorSqrt;
 		private long denominator;
-		private boolean redused = false;
+		private boolean reduced;
 
 		private FractionSqrt(long numeratorInt, long numeratorSqrt, long denominator) {
 			this.numeratorInt = numeratorInt;
 			this.numeratorSqrt = numeratorSqrt;
 			this.denominator = denominator;
-			redused = false;
+			reduced = false;
 			long greatestCommonDivisor = MathUtils.greatestCommonDivisor(this.numeratorInt, this.denominator);
 			if (greatestCommonDivisor != 1) {
-				redused = true;
+				reduced = true;
 				this.numeratorInt = this.numeratorInt / greatestCommonDivisor;
 				this.denominator = this.denominator / greatestCommonDivisor;
 			}
@@ -854,8 +854,8 @@ public class Calculator {
 			return (double) this.numeratorInt * (double) Math.sqrt(this.numeratorSqrt) / (double) this.denominator;
 		}
 
-		public boolean isRedused() {
-			return redused;
+		public boolean isReduced() {
+			return reduced;
 		}
 
 	}
@@ -905,26 +905,26 @@ public class Calculator {
 		SystemFormula systemEquation = new SystemFormula(equation1, equation2);
 		solution.add(systemEquation);
 
-		XsInvetigation xsInvetigation;
+		XsInvestigation xsInvestigation;
 		String investigationText;
 
 		if (qDouble > 0) {
 			investigationText = context.getString(R.string.solution_vieta_text_1);
 			if (-pDouble > 0) {
 				investigationText = investigationText + context.getString(R.string.solution_vieta_text_2);
-				xsInvetigation = XsInvetigation.BOTH_POSITIVE;
+				xsInvestigation = XsInvestigation.BOTH_POSITIVE;
 			} else {
 				investigationText = investigationText + context.getString(R.string.solution_vieta_text_3);
-				xsInvetigation = XsInvetigation.BOTH_NEGATIVE;
+				xsInvestigation = XsInvestigation.BOTH_NEGATIVE;
 			}
 		} else {
 			investigationText = context.getString(R.string.solution_vieta_text_4);
 			if (-pDouble > 0) {
 				investigationText = investigationText + context.getString(R.string.solution_vieta_text_5);
-				xsInvetigation = XsInvetigation.LAGER_POSITIVE;
+				xsInvestigation = XsInvestigation.LAGER_POSITIVE;
 			} else {
 				investigationText = investigationText + context.getString(R.string.solution_vieta_text_6);
-				xsInvetigation = XsInvetigation.LAGER_NEGATIVE;
+				xsInvestigation = XsInvestigation.LAGER_NEGATIVE;
 			}
 		}
 		solution.add(new TextPart(investigationText));
@@ -932,7 +932,7 @@ public class Calculator {
 		solution.add(equation1);
 		StringBuilder multipliers = new StringBuilder(context.getString(R.string.solution_vieta_text_8));
 		multipliers.append(qDouble).append(context.getString(R.string.solution_vieta_text_9));
-		List<Pair> pairs = getPairs(Math.abs(qDouble), xsInvetigation);
+		List<Pair> pairs = getPairs(Math.abs(qDouble), xsInvestigation);
 		for (Pair pair : pairs) {
 			multipliers.append(" ").append(pair.toString()).append(",");
 		}

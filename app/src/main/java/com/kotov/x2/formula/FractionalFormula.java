@@ -25,12 +25,12 @@ public class FractionalFormula implements ISolutionItem, ISolutionLine {
 
 		int width = Math.max(numeratorBounds.width(), denominatorBounds.width());
 		int sampleHeight = DrawUtils.getSampleHeight(textSize);
-		int strokWidth = DrawUtils.getStrokeWidth(textSize);
+		int strokeWidth = DrawUtils.getStrokeWidth(textSize);
 
-		numerator.draw(canvas, textSize, leftX + (width - numeratorBounds.width()) / 2, bottomY - getMarginTop(textSize) - numeratorBounds.bottom - strokWidth / 2 - sampleHeight / 2);
-		DrawUtils.drawLineBySize(canvas, null, strokWidth, leftX, bottomY - sampleHeight / 2, width, 0);
+		numerator.draw(canvas, textSize, leftX + (width - numeratorBounds.width()) / 2, bottomY - getMarginTop(textSize) - numeratorBounds.bottom - strokeWidth / 2 - sampleHeight / 2);
+		DrawUtils.drawLineBySize(canvas, null, strokeWidth, leftX, bottomY - sampleHeight / 2, width, 0);
 		
-		int denominatorBottomY = bottomY - denominatorBounds.top + getMarginTop(textSize) + strokWidth - strokWidth / 2 - sampleHeight + sampleHeight / 2;
+		int denominatorBottomY = bottomY - denominatorBounds.top + getMarginTop(textSize) + strokeWidth - strokeWidth / 2 - sampleHeight + sampleHeight / 2;
 		denominator.draw(canvas, textSize, leftX + (width - denominatorBounds.width()) / 2, denominatorBottomY);
 	}
 
@@ -44,9 +44,9 @@ public class FractionalFormula implements ISolutionItem, ISolutionLine {
 		Rect numeratorBounds = numerator.getBounds(textSize);
 		Rect denominatorBounds = denominator.getBounds(textSize);
 		int sampleHeight = DrawUtils.getSampleHeight(textSize);
-		int strokWidth = DrawUtils.getStrokeWidth(textSize);
-		return new Rect(0, numeratorBounds.top - numeratorBounds.bottom - getMarginTop(textSize) - strokWidth / 2 - sampleHeight / 2, Math.max(numeratorBounds.width(),
-				denominatorBounds.width()), denominatorBounds.bottom - denominatorBounds.top + getMarginTop(textSize) + strokWidth - strokWidth / 2 - sampleHeight + sampleHeight
+		int strokeWidth = DrawUtils.getStrokeWidth(textSize);
+		return new Rect(0, numeratorBounds.top - numeratorBounds.bottom - getMarginTop(textSize) - strokeWidth / 2 - sampleHeight / 2, Math.max(numeratorBounds.width(),
+				denominatorBounds.width()), denominatorBounds.bottom - denominatorBounds.top + getMarginTop(textSize) + strokeWidth - strokeWidth / 2 - sampleHeight + sampleHeight
 				/ 2);
 	}
 

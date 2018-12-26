@@ -46,8 +46,8 @@
     <string name="ask_rate_text">Если Вам нравится приложение, не могли бы Вы поставить оценку в маркете?\u000AСпасибо за поддержку!</string>
     <string name="button_rate_it_title">Оценить сейчас</string>
     <string name="button_remind_later_title">Напомнить позже</string>
-    <string name="button_dont_rate_title">Нет, спасибо</string>
-    <string name="solution_descriminant_title">Решение через дискриминант</string>
+    <string name="button_do_not_rate_title">Нет, спасибо</string>
+    <string name="solution_discriminant_title">Решение через дискриминант</string>
     <string name="solution_vieta_title">Решение по теореме Виета</string>
     <string name="solution_vieta_no_1_title">Так как корни уравнения не являются целыми числами, решение через теорему Виета нецелесообразно.</string>
     <string name="solution_vieta_no_2_title">Так как уравнение имеет неприведённый вид, решение через теорему Виета нецелесообразно.</string>

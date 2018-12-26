@@ -5,9 +5,9 @@ import android.graphics.Rect;
 
 public interface ISolutionItem {
 
-	abstract void draw(Canvas canvas, int textSize, int leftX, int bottomY);
-	abstract Rect getBounds(int textSize);
-	abstract int getHeightInCells(int textSize);
+	void draw(Canvas canvas, int textSize, int leftX, int bottomY);
+	Rect getBounds(int textSize);
+	int getHeightInCells(int textSize);
 
 
 }

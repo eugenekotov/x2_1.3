@@ -5,6 +5,6 @@ import java.util.List;
 
 public interface ISolutionPart {
 	
-	public abstract List<ISolutionLine> getSolutionLines(int textSize);
+	List<ISolutionLine> getSolutionLines(int textSize);
 
 }

@@ -74,7 +74,7 @@ public class MainActivity extends Activity {
     private Solution solution;
     private boolean isSolutionShowing = false;
     private boolean enableEditListener = true;
-    private boolean isAnswerAreaHeightCaclculated = false;
+    private boolean isAnswerAreaHeightCalculated = false;
     private int answerAreaHeight = 0;
     private int textSize;
     private int orientation;
@@ -122,7 +122,7 @@ public class MainActivity extends Activity {
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
-        if (!isAnswerAreaHeightCaclculated) {
+        if (!isAnswerAreaHeightCalculated) {
             calcAnswerAreaHeight();
             if (isSolutionShowing) {
                 calc();
@@ -137,8 +137,8 @@ public class MainActivity extends Activity {
     }
 
     private void initAnswerArea() {
-        scrollView = (ScrollView) findViewById(R.id.scrollView);
-        drawingImageView = (ImageView) this.findViewById(R.id.drawingImageView);
+        scrollView = findViewById(R.id.scrollView);
+        drawingImageView = this.findViewById(R.id.drawingImageView);
         cellColor = ContextCompat.getColor(getApplicationContext(), R.color.cell_color);
     }
 
@@ -247,7 +247,7 @@ public class MainActivity extends Activity {
     }
 
     private void drawCells() {
-        if (!isAnswerAreaHeightCaclculated) {
+        if (!isAnswerAreaHeightCalculated) {
             return;
         }
         Bitmap bitmap = Bitmap.createBitmap(scrollView.getWidth(), answerAreaHeight, Bitmap.Config.ARGB_8888);
@@ -258,9 +258,9 @@ public class MainActivity extends Activity {
             news.add(new TextPart(getString(R.string.news_text_1_1)));
             news.add(new TextPart(getString(R.string.news_text_1_2)));
             news.print(canvas, textSize);
+            /*
         } else {
-			/*
-			----------Part for debag---------------------------------  
+			----------Part for debag---------------------------------
 			Solution news = new Solution();
 			news.add(new TextPart("launchCount == " + launchCount));
 			news.add(new TextPart("needAskRate == " + needAskRate));
@@ -275,7 +275,7 @@ public class MainActivity extends Activity {
 
     private void calcAnswerAreaHeight() {
         answerAreaHeight = layoutMain.getHeight() - layoutWindowTitle.getHeight() - layoutCondition.getHeight();
-        isAnswerAreaHeightCaclculated = true;
+        isAnswerAreaHeightCalculated = true;
     }
 
     private void initConditionArea() {
@@ -493,12 +493,8 @@ public class MainActivity extends Activity {
             String askRateResult = data.getStringExtra(KEY_ASK_RATE_RESULT);
             if (askRateResult.equals(getString(R.string.button_rate_it_title))) {
                 openMarket();
-                needAskRate = false;
-            } else if (askRateResult.equals(getString(R.string.button_remind_later_title))) {
-                needAskRate = true;
-            } else {
-                needAskRate = false;
             }
+            needAskRate = askRateResult.equals(getString(R.string.button_remind_later_title));
             savePrefs();
             finish();
         }
@@ -508,7 +504,7 @@ public class MainActivity extends Activity {
         String packageName = getPackageName();
         try {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(APP_MARKET_URL + packageName)));
-        } catch (android.content.ActivityNotFoundException anfe) {
+        } catch (android.content.ActivityNotFoundException e) {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(APP_WEB_URL + packageName)));
         }
     }

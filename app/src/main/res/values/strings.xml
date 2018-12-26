@@ -52,9 +52,9 @@
     <string name="ask_rate_text">If you enjoy Quadratic equation, would you mind taking a moment to rate it?\u000AThanks for your support!</string>
     <string name="button_rate_it_title">Rate it now</string>
     <string name="button_remind_later_title">Remind me later</string>
-    <string name="button_dont_rate_title">No, thanks</string>
+    <string name="button_do_not_rate_title">No, thanks</string>
     <!-- solution -->
-    <string name="solution_descriminant_title">Solving the quadratic equation by discriminant</string>
+    <string name="solution_discriminant_title">Solving the quadratic equation by discriminant</string>
     <string name="solution_vieta_title">Solving the quadratic equation by Vieta`s formulas</string>
     <string name="solution_vieta_no_1_title">Since the roots are not whole numbers, the solving by the Vieta theorem inappropriate.</string>
     <string name="solution_vieta_no_2_title">Since the equation is not reduced, the solving by the Vieta theorem inappropriate.</string>

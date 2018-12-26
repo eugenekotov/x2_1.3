@@ -33,12 +33,12 @@ public class HelpActivity extends Activity {
 	}
 
 	private void init() {
-		scrollViewHelp = (ScrollView) findViewById(R.id.scrollViewHelp);
-		textViewHelp1 = (TextView) findViewById(R.id.textViewHelp1);
-		textViewHelp2 = (TextView) findViewById(R.id.textViewHelp2);
-		textViewHelp3 = (TextView) findViewById(R.id.textViewHelp3);
+		scrollViewHelp = findViewById(R.id.scrollViewHelp);
+		textViewHelp1 = findViewById(R.id.textViewHelp1);
+		textViewHelp2 = findViewById(R.id.textViewHelp2);
+		textViewHelp3 = findViewById(R.id.textViewHelp3);
 		
-		FormulaView formulaEquation = (FormulaView) findViewById(R.id.formulaEquation);
+		FormulaView formulaEquation = findViewById(R.id.formulaEquation);
 		ListFormula listConstruction = new ListFormula();
 		listConstruction.add(new PowerFormula(new LetterFormula("ax"), new LetterFormula("2")));
 		listConstruction.add(new LetterFormula("+bx+c=0"));

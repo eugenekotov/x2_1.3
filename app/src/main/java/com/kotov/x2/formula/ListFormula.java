@@ -1,14 +1,14 @@
 package com.kotov.x2.formula;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.graphics.Canvas;
 import android.graphics.Rect;
 
 import com.kotov.x2.drawer.DrawUtils;
 import com.kotov.x2.solution.ISolutionItem;
 import com.kotov.x2.solution.ISolutionLine;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ListFormula implements ISolutionItem, ISolutionLine {
 
@@ -57,7 +57,7 @@ public class ListFormula implements ISolutionItem, ISolutionLine {
 
 	@Override
 	public String toString() {
-		return "Constructions [contructions=" + constructions + "]";
+		return "Constructions [constructions=" + constructions + "]";
 	}
 	
 	public int size() {
