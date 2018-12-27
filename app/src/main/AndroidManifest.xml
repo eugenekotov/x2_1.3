@@ -14,17 +14,20 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-4840130480184414~5042240483"/>
+
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+
+
         <activity
             android:name=".activities.MainActivity"
             android:label="@string/app_name"
             android:windowSoftInputMode="adjustPan">
-
-            <meta-data
-                android:name="com.google.android.gms.version"
-                android:value="@integer/google_play_services_version" />
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -36,10 +39,6 @@
             android:name=".activities.HelpActivity"
             android:label="@string/title_activity_help"
             android:windowSoftInputMode="adjustPan" >
-            <meta-data
-                android:name="com.google.android.gms.version"
-                android:value="@integer/google_play_services_version" />
-
         </activity>
 
         <activity

@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.kotov.x2.R;
 import com.kotov.x2.formula.LetterFormula;
 import com.kotov.x2.formula.ListFormula;
@@ -25,9 +27,9 @@ public class HelpActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_help);
 		// ad
-//		AdView mAdView = (AdView) findViewById(R.id.adViewHelp);
-//        AdRequest adRequest = new AdRequest.Builder().build();
-//        mAdView.loadAd(adRequest);
+		AdView mAdView = (AdView) findViewById(R.id.adViewHelp);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
         //
 		init();
 	}

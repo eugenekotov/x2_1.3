@@ -30,6 +30,9 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.TextView.OnEditorActionListener;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.kotov.x2.R;
 import com.kotov.x2.calculator.Calculator;
 import com.kotov.x2.drawer.DrawUtils;
@@ -67,9 +70,6 @@ public class MainActivity extends Activity {
     private ViewGroup layoutMain;
     private LinearLayout layoutWindowTitle;
     private LinearLayout layoutCondition;
-//    private FormulaView formulaX2;
-//    private FormulaView formulaX;
-//    private FormulaView formula0;
     private int cellColor;
     private Solution solution;
     private boolean isSolutionShowing = false;
@@ -89,11 +89,13 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        // ad
-//		AdView mAdView = (AdView) findViewById(R.id.adViewMain);
-//		AdRequest adRequest = new AdRequest.Builder().build();
-//		mAdView.loadAd(adRequest);
-        //
+
+        MobileAds.initialize(this, getResources().getString(R.string.ad_mob_app_id));
+
+        AdView mAdView = findViewById(R.id.adViewMain);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
         init();
     }
 

@@ -1,20 +1,21 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.kotov.x2.activities.MainActivity" >
+    tools:context="com.kotov.x2.activities.MainActivity">
 
     <FrameLayout
         android:id="@+id/layoutMain"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" >
+        android:layout_weight="1">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <LinearLayout
                 android:id="@+id/layoutAppTitle"
@@ -22,7 +23,7 @@
                 android:layout_height="wrap_content"
                 android:background="@color/title_background"
                 android:gravity="center_vertical"
-                android:orientation="horizontal" >
+                android:orientation="horizontal">
 
                 <TextView
                     style="@style/ApplicationTitle"
@@ -31,7 +32,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="right" >
+                    android:gravity="right">
 
                     <ImageButton
                         android:id="@+id/buttonShare"
@@ -51,80 +52,80 @@
                 android:layout_height="85dp"
                 android:background="@color/sub_title_background"
                 android:gravity="center_horizontal"
-                android:orientation="horizontal" >
-                
+                android:orientation="horizontal">
+
                 <EditText
                     android:id="@+id/editTextA"
                     android:layout_width="0dp"
                     android:layout_height="@dimen/edit_text_height"
-                    android:layout_weight="1"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
-                    android:inputType="numberSigned|numberDecimal"
-                    android:textSize="16sp"
-                    android:maxLength="7"
+                    android:layout_weight="1"
                     android:hint="@string/hint_a"
-                    android:imeOptions="actionNext" />
+                    android:imeOptions="actionNext"
+                    android:inputType="numberSigned|numberDecimal"
+                    android:maxLength="7"
+                    android:textSize="16sp" />
 
 
                 <com.kotov.x2.widgets.FormulaView
                     android:id="@+id/formulaX2"
                     android:layout_width="10dp"
                     android:layout_height="10dp"
-                    android:layout_marginTop="@dimen/formula_margin_top"
-                    android:layout_marginLeft="@dimen/formula_margin_left" />
+                    android:layout_marginLeft="@dimen/formula_margin_left"
+                    android:layout_marginTop="@dimen/formula_margin_top" />
 
                 <EditText
                     android:id="@+id/editTextB"
                     android:layout_width="0dp"
                     android:layout_height="@dimen/edit_text_height"
-                    android:layout_weight="1"
                     android:layout_marginTop="10dp"
-                    android:inputType="numberSigned|numberDecimal"
-                    android:textSize="16sp"
-                    android:maxLength="7"
+                    android:layout_weight="1"
                     android:hint="@string/hint_b"
-                    android:imeOptions="actionNext" />
+                    android:imeOptions="actionNext"
+                    android:inputType="numberSigned|numberDecimal"
+                    android:maxLength="7"
+                    android:textSize="16sp" />
 
                 <com.kotov.x2.widgets.FormulaView
                     android:id="@+id/formulaX"
                     android:layout_width="10dp"
                     android:layout_height="10dp"
-                    android:layout_marginTop="@dimen/formula_margin_top"
-                    android:layout_marginLeft="@dimen/formula_margin_left" />
+                    android:layout_marginLeft="@dimen/formula_margin_left"
+                    android:layout_marginTop="@dimen/formula_margin_top" />
 
                 <EditText
                     android:id="@+id/editTextC"
                     android:layout_width="0dp"
                     android:layout_height="@dimen/edit_text_height"
-                    android:layout_weight="1"
                     android:layout_marginTop="10dp"
-                    android:inputType="numberSigned|numberDecimal"
-                    android:textSize="16sp"
-                    android:maxLength="7"
+                    android:layout_weight="1"
                     android:hint="@string/hint_c"
-                    android:imeOptions="actionDone" />
+                    android:imeOptions="actionDone"
+                    android:inputType="numberSigned|numberDecimal"
+                    android:maxLength="7"
+                    android:textSize="16sp" />
 
                 <com.kotov.x2.widgets.FormulaView
                     android:id="@+id/formula0"
                     android:layout_width="10dp"
                     android:layout_height="10dp"
-                    android:layout_marginTop="@dimen/formula_margin_top"
-                    android:layout_marginLeft="@dimen/formula_margin_left" 
-                    android:layout_marginRight="10dp" />
+                    android:layout_marginLeft="@dimen/formula_margin_left"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="@dimen/formula_margin_top" />
             </LinearLayout>
 
             <FrameLayout
                 android:id="@+id/answerLayout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/white" >
+                android:background="@color/white">
 
                 <ScrollView
                     android:id="@+id/scrollView"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:scrollbarAlwaysDrawVerticalTrack="true" >
+                    android:scrollbarAlwaysDrawVerticalTrack="true">
 
                     <ImageView
                         android:id="@+id/drawingImageView"
@@ -147,7 +148,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="top"
             android:layout_marginTop="@dimen/button_margin_top"
-            android:gravity="right" >
+            android:gravity="right">
 
             <ImageButton
                 android:layout_width="wrap_content"
@@ -180,7 +181,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/sub_title_background" >
+        android:background="@color/sub_title_background">
 
         <TextView
             android:layout_width="wrap_content"
@@ -189,16 +190,15 @@
             android:text="@string/place_your_ad"
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
-<!--         
-        <com.google.android.gms.ads.AdView
+        <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
             android:id="@+id/adViewMain"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
             ads:adSize="BANNER"
-            ads:adUnitId="@string/banner_ad_unit_id_1" >
-        </com.google.android.gms.ads.AdView>
- -->   
- </FrameLayout>
+            ads:adUnitId="@string/banner_ad_unit_id_1"></com.google.android.gms.ads.AdView>
+
+    </FrameLayout>
 
 </LinearLayout>

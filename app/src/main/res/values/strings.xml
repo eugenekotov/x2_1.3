@@ -45,6 +45,7 @@
     <string name="help_text_3_2">(image 6)</string>
     <string name="help_text_3_3">(image 7)</string>
     <!-- ad -->
+    <string name="ad_mob_app_id">ca-app-pub-4840130480184414~5042240483</string>
     <string name="banner_ad_unit_id_1">ca-app-pub-4840130480184414/7995706883</string>
     <string name="banner_ad_unit_id_2">ca-app-pub-4840130480184414/6949828888</string>
     <!-- ask rate -->
