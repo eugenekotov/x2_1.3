@@ -17,6 +17,9 @@
     <string name="message_simplification_3">, получим уравнение:</string>
     <string name="message_overflow">Введены слишком большие значения.</string>
     <string name="place_your_ad">Место для полезной рекламы</string>
+    <string name="hint_a">a</string>
+    <string name="hint_b">b</string>
+    <string name="hint_c">c</string>
     <string name="share_title">Посоветовать друзьям</string>
     <string name="share_subject">Совет</string>
     <string name="share_text">Приложение для решения квадратных уравнений:</string>
@@ -41,6 +44,10 @@
     <string name="help_text_3_1">Для ввода дробных значений используйте точку. Смотрите примеры ниже (рис. 6) (рис. 7).</string>
     <string name="help_text_3_2">(рисунок 6)</string>
     <string name="help_text_3_3">(рисунок 7)</string>
+    <!-- ad -->
+    <string name="ad_mob_app_id">ca-app-pub-4840130480184414~5042240483</string>
+    <string name="banner_ad_unit_id_1">ca-app-pub-4840130480184414/7995706883</string>
+    <string name="banner_ad_unit_id_2">ca-app-pub-4840130480184414/6949828888</string>
     <!-- ask rate -->
     <string name="title_activity_ask_rate">Оцените приложение</string>
     <string name="ask_rate_text">Если Вам нравится приложение, не могли бы Вы поставить оценку в маркете?\u000AСпасибо за поддержку!</string>

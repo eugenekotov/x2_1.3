@@ -17,6 +17,9 @@
     <string name="message_simplification_3">, одержимо рівняння:</string>
     <string name="message_overflow">Введені занадто великі значення.</string>
     <string name="place_your_ad">Місце корисної реклами</string>
+    <string name="hint_a">a</string>
+    <string name="hint_b">b</string>
+    <string name="hint_c">c</string>
     <string name="share_title">Порадити друзям</string>
     <string name="share_subject">Порада</string>
     <string name="share_text">Додаток для розв`язання квадратних рівнянь:</string>
@@ -41,6 +44,10 @@
     <string name="help_text_3_1">Для введення дробових значень використовуйте крапку. Дивіться приклади нижче (малюнок 6) (малюнок 7).</string>
     <string name="help_text_3_2">(малюнок 6)</string>
     <string name="help_text_3_3">(малюнок 7)</string>
+    <!-- ad -->
+    <string name="ad_mob_app_id">ca-app-pub-4840130480184414~5042240483</string>
+    <string name="banner_ad_unit_id_1">ca-app-pub-4840130480184414/7995706883</string>
+    <string name="banner_ad_unit_id_2">ca-app-pub-4840130480184414/6949828888</string>
     <!-- ask rate -->
     <string name="title_activity_ask_rate">Оцініть додаток</string>
     <string name="ask_rate_text">Якщо Вам подобається додаток, не могли б Ви поставити оцінку в маркеті?\u000AДякую за підтримку!</string>
