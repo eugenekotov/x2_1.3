@@ -63,6 +63,7 @@ public class MainActivity extends Activity {
     private EditText editTextB;
     private EditText editTextC;
     private ImageButton buttonExecute;
+
     private ScrollView scrollView;
     private ImageView drawingImageView;
     private Timer remindTimer;
